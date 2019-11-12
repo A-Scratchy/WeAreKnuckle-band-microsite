@@ -45,9 +45,6 @@ body {
     z-index: 20;
 }
 
-.sm {
-}
-
 a:hover {
     text-decoration: none;
     color: #F2F7C5;
@@ -69,7 +66,6 @@ a:hover {
     border-bottom: solid thin white;
     padding-bottom: 5vh;
 }
-
 
 .gutter {
     height: 20vh;
@@ -107,12 +103,8 @@ h2 {
 }
 
 .merch-img:hover {
-    opacity: 80;
-    border: thick solid yellow;
+    opacity: 80%;
 }
-
-
-
 
 .gigs {
     font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
@@ -140,6 +132,13 @@ h2 {
     font-size: 2em;
     margin: 0;
 }
+
+.merch-title {
+    background-color: #444444;
+    font-size: 2em;
+    margin: 0;
+}
+
 
 .merch-info .col {
     margin: auto;
