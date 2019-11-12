@@ -1,0 +1,140 @@
+/* CSS Document */
+body {
+    color: white;
+    font-family: 'Permanent Marker', cursive;
+	background-color: black;
+}
+
+@media only screen and (min-width: 1008px) {
+  .icecream {
+    display: none;
+    }
+}
+
+@media only screen and (max-width: 1007px) {
+  .faces {
+    display: none;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .binontiny {
+        display: none;
+    }
+}
+
+.knuckleimg {
+	width: 100%;
+}
+
+.space {
+	height: 50vw;
+}
+
+.cover {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: thick yellow;
+    z-index: 10;
+}
+
+.title {
+    height: 35vh;
+    z-index: 20;
+}
+
+.sm {
+}
+
+a:hover {
+    text-decoration: none;
+    color: #F2F7C5;
+}
+
+.fa {
+    color: #F2F7C59C;
+    font-size: 8vw;
+}
+
+.transsec {
+    height: 65vh;
+    background-color: none;
+}
+
+.sec {
+    background-color: black;
+    border-top: solid thin white;
+    border-bottom: solid thin white;
+    padding-bottom: 5vh;
+}
+
+
+.gutter {
+    height: 20vh;
+    background-color: black;
+}
+
+.socmed {
+    padding-bottom: 1vh;
+}
+
+.active {
+    opacity: 0;
+    transition: color 0.6s ease-out;
+    position: relative;
+    z-index: -100;
+}
+
+.disactive {
+    opacity: 100;
+    transition: color 0.6s ease-out;
+    position: relative;
+    z-index: 1050
+}
+
+.info {
+     position: fixed;
+     bottom: 6vh;
+     width: 100%;
+    transition: all 1s ease-in;
+}
+
+h2 {
+    color: lightgoldenrodyellow;
+    font-size: 3em
+}
+
+.merch-img:hover {
+    opacity: 80;
+    border: thick solid yellow;
+}
+
+.gigs {
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    color: lightgoldenrodyellow;
+}
+
+.icecream {
+    position: fixed;
+    z-index: -1000;
+    width: 25%;
+    top: 30vh;
+    left: 35vw;
+}
+
+.faces {
+    position: fixed;
+    z-index: -1000;
+    width: 90%;
+    left: 5vw;
+    bottom: 0;
+}
+
+.merch_overlay {
+    background-color: grey;
+    opacity: 10%;
+    height: 100%;
+    width: 100%;
+}
