@@ -1,8 +1,8 @@
 //action when in view downwards
-$('.trigger').waypoint(function (direction) {
+$('.stick').waypoint(function (direction) {
     if (direction == 'down') {
-        $('.' + this.element.id + '-foot').addClass("active").removeClass("disactive");
-        $('#' + this.element.id).removeClass("active").addClass("disactive");
+        $('.' + this.element.id + '-foot').addClass("off").removeClass("on");
+        $('#' + this.element.id).removeClass("off").addClass("on");
     }
 
 }, {
@@ -10,19 +10,19 @@ $('.trigger').waypoint(function (direction) {
 });
 
 //action when in view upwards
-$('.trigger').waypoint(function (direction) {
+$('.stick').waypoint(function (direction) {
     if (direction == 'up') {
-        $('.' + this.element.id + '-foot').addClass("active").removeClass("disactive");
-        $('#' + this.element.id).removeClass("active").addClass("disactive");
+        $('.' + this.element.id + '-foot').addClass("off").removeClass("on");
+        $('#' + this.element.id).removeClass("off").addClass("on");
     }
 
 });
 
 //action when out of view upwards
-$('.trigger').waypoint(function (direction) {
+$('.stick').waypoint(function (direction) {
     if (direction == 'up') {
-        $('.' + this.element.id + '-foot').removeClass("active").addClass("disactive");
-        $('#' + this.element.id).addClass("active").removeClass("disactive");
+        $('.' + this.element.id + '-foot').removeClass("off").addClass("on");
+        $('#' + this.element.id).addClass("off").removeClass("on");
     }
    
 }, { offset: 'bottom-in-view' 
@@ -31,7 +31,7 @@ $('.trigger').waypoint(function (direction) {
 //action when bottom in view
 $('.guttertop').waypoint(function (direction) {
     if (direction == 'down') {
-        $('.info').addClass("disactive").removeClass("active")
+        $('.info').addClass("on").removeClass("off")
     }
    
 }, { offset: 'bottom-in-view' 
@@ -40,7 +40,7 @@ $('.guttertop').waypoint(function (direction) {
 //action when bottom out of view
 $('.gutterbottom').waypoint(function (direction) {
     if (direction == 'up') {
-        $('.info').addClass("active").removeClass("disactive");
+        $('.info').addClass("off").removeClass("on");
     }
    
 });
