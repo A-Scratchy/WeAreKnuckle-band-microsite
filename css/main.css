@@ -27,8 +27,8 @@ h2 {
     .bandpic {
         position: fixed;
         z-index: -1000;
-        width: 90%;
-        left: 5vw;
+        width: 99%;
+        left: 0;
         bottom: 0;
     }
 }
@@ -58,6 +58,7 @@ h2 {
 .title {
     height: 35vh;
     z-index: 20;
+    fill: rgb(253, 255, 238);
 }
 
 /* link hover */
