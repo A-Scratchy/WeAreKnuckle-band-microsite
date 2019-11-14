@@ -26,5 +26,7 @@ $(document).ready(function () {
             stickIcons(element)
         });
     });
-    
+
 });
+
+//END
