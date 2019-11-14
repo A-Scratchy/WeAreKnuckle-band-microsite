@@ -10,7 +10,7 @@ body {
 footer {
     height: 20vh;
     background-color: black;
-}   
+}
 
 /* section titles */
 h2 {
@@ -20,9 +20,10 @@ h2 {
 
 /* large screen show bandpic */
 @media only screen and (min-width: 1008px) {
-  .icecream {
+    .icecream {
         display: none;
     }
+
     .bandpic {
         position: fixed;
         z-index: -1000;
@@ -34,9 +35,10 @@ h2 {
 
 /* small screem show ice cream */
 @media only screen and (max-width: 1007px) {
-  .bandpic {
+    .bandpic {
         display: none;
     }
+
     .icecream {
         position: fixed;
         z-index: -1000;

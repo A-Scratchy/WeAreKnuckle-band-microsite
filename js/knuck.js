@@ -24,8 +24,9 @@ $('.stick').waypoint(function (direction) {
         $('.' + this.element.id + '-foot').removeClass("off").addClass("on");
         $('#' + this.element.id).addClass("off").removeClass("on");
     }
-   
-}, { offset: 'bottom-in-view' 
+
+}, {
+    offset: 'bottom-in-view'
 });
 
 //action when bottom in view
@@ -33,8 +34,9 @@ $('.guttertop').waypoint(function (direction) {
     if (direction == 'down') {
         $('.info').addClass("on").removeClass("off")
     }
-   
-}, { offset: 'bottom-in-view' 
+
+}, {
+    offset: 'bottom-in-view'
 });
 
 //action when bottom out of view
@@ -42,5 +44,5 @@ $('.gutterbottom').waypoint(function (direction) {
     if (direction == 'up') {
         $('.info').addClass("off").removeClass("on");
     }
-   
+
 });
