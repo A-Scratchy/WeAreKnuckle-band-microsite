@@ -1,32 +1,30 @@
-$(document).ready(function () {
 
-    function scrolledPast(e) {
-        var elementTop = e.offset().top + e.height();
-        var viewportTop = $(window).scrollTop();
-        var viewportBottom = viewportTop + $(window).height();
-        return elementTop < viewportBottom;
+    var scrolledPast = function (elem) {
+        var bounding = elem.getBoundingClientRect();
+        return (
+           bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
     };
 
-    var sticky = $('.stick')
+    var sticky = document.querySelectorAll('.stick')
 
-    function stickIcons(element) {
-        var main = $(element)
-        var stick = $('.' + element.id + '-foot')
-        if (scrolledPast(main)) {
-            main.removeClass("off").addClass("on");
-            stick.addClass("off").removeClass("on");
-        } else {
-            main.addClass("off").removeClass("on");
-            stick.addClass("on").removeClass("off");
-        }
+    var stickIcons = function (e) {
+        var stick = document.getElementsByClassName(`${e.id}-foot`)[0]
+        scrolledPast(e) ? (
+            e.classList.add("on"),
+            e.classList.remove("off"),
+            stick.classList.add("off"),
+            stick.classList.remove("on")
+        ) : (
+            e.classList.add("off"),
+            e.classList.remove("on"),
+            stick.classList.add("on"),
+            stick.classList.remove("off")
+        )
     }
 
-    $(window).scroll(function () {
-        sticky.each(function (index, element) {
-            stickIcons(element)
+    document.addEventListener("scroll", function() {
+        Array.prototype.forEach.call(sticky, function(el, i){
+            stickIcons(el)
         });
     });
-
-});
-
-//END
