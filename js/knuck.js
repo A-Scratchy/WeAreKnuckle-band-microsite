@@ -9,6 +9,7 @@
     var sticky = document.querySelectorAll('.stick')
 
     var stickIcons = function (e) {
+        //maybe change this to an id so dont waste the array
         var stick = document.getElementsByClassName(`${e.id}-foot`)[0]
         scrolledPast(e) ? (
             e.classList.add("on"),
